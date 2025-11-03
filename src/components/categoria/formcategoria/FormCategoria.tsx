@@ -71,21 +71,6 @@ function FormCategoria() {
 
             <form className="w-1/2 flex flex-col gap-4" 
                 onSubmit={gerarNovaCategoria} >
-                
-                {/* NOVO CAMPO: NOME */}
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="nome" className="text-gray-900">Nome da Categoria</label>
-                    <input
-                        type="text"
-                        placeholder="Nome da Categoria"
-                        name='nome'
-                        className="border-2 border-lime-600 rounded p-2 bg-yellow-100"
-                        value={categoria.nome}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                    />
-                </div>
-                
-                {/* CAMPO EXISTENTE: DESCRIÇÃO */}
                 <div className="flex flex-col gap-2">
                     <label htmlFor="descricao" className="text-gray-900">Descrição da Categoria</label>
                     <input
@@ -95,9 +80,9 @@ function FormCategoria() {
                         className="border-2 border-lime-600 rounded p-2 bg-yellow-100"
                         value={categoria.descricao}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        // categoria descrição # categoria nome
                     />
                 </div>
-                
                 <button
                     className="rounded text-gray-900 bg-yellow-400 
                                hover:bg-lime-500 w-1/2 py-2 mx-auto flex justify-center"
